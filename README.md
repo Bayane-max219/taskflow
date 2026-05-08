@@ -2,7 +2,22 @@
 
 > Gestionnaire de tâches fullstack — React · Node.js · MongoDB · Jest · Cypress · Sentry
 
+**Live demo** : https://frontend-dusky-alpha-84.vercel.app
+
 Built with **React + Vite** (frontend) · **Node.js + Express + MongoDB** (backend) · **Jest** (unit tests) · **Cypress** (E2E tests) · **Sentry** (monitoring)
+
+---
+
+## Screenshots
+
+### Inscription
+![Inscription](screnshoots/1-Inscription.png)
+
+### Connexion
+![Connexion](screnshoots/2-Connexion.png)
+
+### Gestionnaire de tâches
+![List taches](screnshoots/3-%20List%20taches.png)
 
 ---
 
