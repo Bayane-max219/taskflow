@@ -42,8 +42,16 @@ function AuthForm({ onAuth }) {
 
   return (
     <div style={{ maxWidth: 380, margin: "80px auto", fontFamily: "sans-serif", padding: "0 16px" }}>
-      <h1 style={{ fontSize: 28, fontWeight: 700, marginBottom: 4 }}>TaskFlow</h1>
-      <p style={{ color: "#555", marginBottom: 32 }}>Gestionnaire de tâches — React · Node.js · MongoDB</p>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 6 }}>
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="10" fill="#2563eb"/>
+          <path d="M10 18l6 6 10-10" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <h1 style={{ fontSize: 28, fontWeight: 700, margin: 0, color: "#fff" }}>TaskFlow</h1>
+      </div>
+      <p style={{ color: "#d1d5db", marginBottom: 32, fontSize: 14, letterSpacing: "0.01em" }}>
+        Gestionnaire de tâches — React · Node.js · MongoDB
+      </p>
 
       <div style={{ display: "flex", gap: 8, marginBottom: 24 }}>
         {["login", "register"].map((m) => (
@@ -137,15 +145,21 @@ function TaskManager({ email, onLogout }) {
   return (
     <div style={{ maxWidth: 520, margin: "48px auto", fontFamily: "sans-serif", padding: "0 16px" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
-        <h1 style={{ fontSize: 28, fontWeight: 700, margin: 0 }}>TaskFlow</h1>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="10" fill="#2563eb"/>
+            <path d="M10 18l6 6 10-10" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <h1 style={{ fontSize: 24, fontWeight: 700, margin: 0, color: "#fff" }}>TaskFlow</h1>
+        </div>
         <button onClick={onLogout} style={{
-          padding: "6px 14px", background: "#f3f4f6", border: "1px solid #d1d5db",
-          borderRadius: 6, cursor: "pointer", fontSize: 13, color: "#374151",
+          padding: "6px 14px", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)",
+          borderRadius: 6, cursor: "pointer", fontSize: 13, color: "#d1d5db",
         }}>
           Déconnexion
         </button>
       </div>
-      <p style={{ color: "#555", marginBottom: 24, fontSize: 14 }}>{email}</p>
+      <p style={{ color: "#9ca3af", marginBottom: 24, fontSize: 13 }}>{email}</p>
 
       <form onSubmit={addTask} style={{ display: "flex", gap: 8, marginBottom: 24 }}>
         <input
